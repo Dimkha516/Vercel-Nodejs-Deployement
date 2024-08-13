@@ -1,0 +1,33 @@
+openapi: 3.0.0
+info:
+  title: API Documentation
+  description: Documentation de l'API nodeJS
+  version: 1.0.0
+servers:
+  - url: http://localhost:5500
+    description: Serveur local
+
+paths:
+  /users:
+    get:
+      summary: Récupérer la liste des utilisateurs
+      responses:
+        '200':
+          description: Voici la liste des utilisateurs
+          content:
+            application/json:
+              schema:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    _id:
+                      type: string
+                    nomComplet:
+                      type: string
+                    phone:
+                      type: number
+                    adress:
+                      type: string
+
+
